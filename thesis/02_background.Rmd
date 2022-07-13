@@ -1,0 +1,3 @@
+# Background {#sec:background}
+
+Here goes some background, for example references on R Markdown [@xie2018rmd] and Bookdown [@xie2016bookdown].

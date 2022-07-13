@@ -1,0 +1,15 @@
+# Experiments {#sec:experiments}
+
+Here go some experiments, for example the average speed in the cars data set is `r mean(cars$speed)`.
+
+You can also produce tables directly from R code:
+
+```{r tables-mtcars, echo=FALSE}
+# kable produces nice table output  
+#  - see ?kable 
+#  - see also package `kableExtra` 
+#  - booktabs (LaTex package) makes the table look even nicer
+#  - longtable (LaTex package) is required for better floating control
+
+knitr::kable(iris[1:5, ], caption = 'A simple table.', booktabs = TRUE, longtable = TRUE) 
+```

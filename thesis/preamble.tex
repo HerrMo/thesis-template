@@ -1,0 +1,27 @@
+% Set your Title, name, supervisor etc.
+\newcommand{\mytitle}{My Super Fancy Thesis Title}
+\newcommand{\myname}{Jane Doe}
+\newcommand{\mysupervisor}{Dr Dre}
+\newcommand{\dueday}{dd}
+\newcommand{\duemonth}{Month}
+\newcommand{\dueyear}{yyyy}
+
+
+% Add more specific packages, e.g.
+% \usepackage{alltt}
+% \usepackage{ragged2e}
+
+
+% Defining fancy header -- don't touch
+\usepackage{fancyhdr}
+\newcommand{\changefont}{%
+    \fontsize{8}{11}\selectfont
+}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[R]{\changefont{\mytitle}}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+\setlength{\headheight}{14.5pt}
+\setlength{\parindent}{0pt}
+\interfootnotelinepenalty = 10000

@@ -1,0 +1,16 @@
+# RStudio Options settings {#sec:appA}
+
+Change the RStudio default options as follows:
+
+Global Options 
+  
+  - General
+    - Basic
+      - Restore .RData into workspace at startup: unckeck
+      - Save workspace to .RData on exit: Never
+
+  - R Markdown
+    - Basic
+      - Evaluate chunks in directory: document
+    - Citations (requires Better BibTex extension for Zotero)
+      - Use Better BibTex for citation keys and BibTex export: check

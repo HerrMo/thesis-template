@@ -1,0 +1,81 @@
+---
+output:
+  bookdown::pdf_document2:
+    keep_tex: yes
+    toc: yes
+    pagestyle: headings
+    fig_caption: yes
+    citation_package: natbib
+    includes:
+        in_header:
+          - preamble.tex # latex preamble: 
+                         # here you can set your name, title, date, supervisor etc. 
+                         # you can also include specific latex packages
+        before_body: 
+          - params/title-page.tex # defines title page layout
+          - abstract.tex          # your abstract
+        after_body:
+          - params/affida.tex # delcartion of authorship
+  bookdown::html_document2: default
+documentclass: scrartcl # article 
+classoptions:
+  - 12pt
+geometry:
+  - a4paper
+  - width=160mm
+  - top=35mm
+  - bottom=30mm
+  - bindingoffset=0mm
+link-citations: yes
+linkcolor: blue
+bibliography: references.bib
+natbiboptions: "round, comma"
+---
+
+<!-- %%% if you would want to include material overview -->
+<!-- %%% use one of the following in addition -->
+\newpage
+\listoffigures
+\newpage
+<!-- \listoftables -->
+<!-- \newpage -->
+
+\pagenumbering{arabic}
+
+
+```{r setup, include=FALSE}
+# here you can set global R chunk options
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r child = '01_intro.Rmd'}
+```
+
+```{r child = '02_background.Rmd'}
+```
+
+```{r child = '03_experiments.Rmd'}
+```
+
+```{r child = '04_conclusion.Rmd'}
+```
+
+\newpage
+
+\pagenumbering{Roman}
+
+# (APPENDIX) Appendix {-} 
+
+<!-- `r if (knitr::is_latex_output()) ' -->
+<!-- # Appendix {-} -->
+<!-- '`  -->
+
+```{r child = 'A_appendix.Rmd'}
+```
+
+\newpage
+ 
+`r if (knitr::is_html_output()) '
+# References {-}
+'` 
+

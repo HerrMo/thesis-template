@@ -1,0 +1,61 @@
+# Introduction {#sec:intro}
+
+This is a R Markdown template for thesis' at the Department of Statistics, LMU.
+
+You are not obligated to work with this template (despite we highly recommend it), but for the final submission you need 
+to provide a repository with a similar structure and running code.
+
+To create html output of this intro chapter click the **Knit** button. To create html or pdf (see drop down menu) output of 
+the complete thesis template click the **Knit** button in `00_thesis.Rmd`.
+
+## R Markdown and Bookdown
+
+The template builds on R Markdown and its extension Bookdown.  
+
+> Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R
+Markdown see <http://rmarkdown.rstudio.com>.
+>
+> When you click the **Knit** button a document will be generated that includes both content as well as the output of any
+embedded R code chunks within the document. 
+>
+> --- R Studio
+
+For a quick overview see the [R Markdown cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf) 
+and for the details the [R Markdown](https://bookdown.org/yihui/rmarkdown) and [Bookdown](https://bookdown.org/yihui/bookdown/) 
+(esp. [Ch. 2.2](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html) and [Ch. 3.4](https://bookdown.org/yihui/bookdown/a-single-document.html)) books.
+
+
+## Including R (or other) Code
+
+You can embed R code 
+
+- directly in a Rmd file, e.g.
+
+```{r direct, echo = FALSE}
+summary(cars)
+```
+
+- by sourcing R scripts, e.g.
+
+```{r sourcing, fig.cap = "Example plot created in a scoured R script."}
+# you need to use package `here`
+source(here::here("code/example-code.R"))
+```
+
+For more on the code chunk options/parameters see [R Markdown Ch. 2.6](https://bookdown.org/yihui/rmarkdown/r-code.html).
+For example, the `echo = FALSE` parameter was removed in the second code chunk to print of the R code that 
+generated Figure \@ref(fig:sourcing).
+
+
+## Cross referencing
+
+You can cross-reference sections, equations, figures, and tables etc., see [Bookdown Ch. 2.2](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html) and [Ch. 2.6](https://bookdown.org/yihui/bookdown/cross-references.html) for details.  
+For example, Section \@ref(sec:background) or Figure \@ref(fig:sourcing).
+
+
+## Citation and References
+
+We strongly recommend to use [Zotero](https://www.zotero.org/) as Reference management software (with [Better Bibtex](https://retorque.re/zotero-better-bibtex/) extension). It is free and open source and has a nice [R Studio integration](https://rstudio.github.io/visual-markdown-editing/citations.html) (see also <https://github.com/crsh/citr> and <https://github.com/paleolimbot/rbbt>).
+
+See [Bookdown Ch. 2.8](https://bookdown.org/yihui/bookdown/citations.html) on how to cite references in R Markdown and
+some general background.
