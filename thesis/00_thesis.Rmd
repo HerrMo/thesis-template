@@ -12,7 +12,10 @@ output:
                          # here you can set your name, title, date, supervisor etc. 
                          # you can also include specific latex packages
         before_body: 
-          - params/title-page.tex # defines title page layout
+          # define title page layout, comment out irrelevant thesis type
+          # - params/title-page-ma.tex   # Master's Thesis
+          # - params/title-page-ba.tex   # Bachelor's Thesis 
+          - params/title-page-sp.tex   # Seminar paper
           - abstract.tex          # your abstract
         after_body:
           - params/affida.tex # delcartion of authorship
